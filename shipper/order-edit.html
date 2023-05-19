@@ -171,16 +171,39 @@
                     />
                   </div>
                 </div>
+
                 <div class="flex">
                   <input
-                    value=""
                     type="checkbox"
                     id="recurring-shipment"
                     aria-level="Recurring shipment"
-                    readonly
-                    checked
+                    onclick="toggleRecurring()"
                   />
                   <label for="recurring-shipment">Recurring Shipment?</label>
+                </div>
+                <div id="recurring-info" class="hidden my-4">
+                  <div class="even-columns">
+                    <div class="form-control">
+                      <label for="origin-country">Frequency</label>
+                      <select id="origin-country" class="form-select">
+                        <option value="">1 Day</option>
+                        <option value="">2 Days</option>
+                        <option value="">3 Days</option>
+                        <option value="">10 Days</option>
+                        <option value="">1 Week</option>
+                        <option value="">2 Weeks</option>
+                        <option value="">1 Month</option>
+                      </select>
+                    </div>
+                    <div class="form-control">
+                      <label for="recurring-end-date">Recurring End Date</label>
+                      <input
+                        type="date"
+                        id="recurring-end-date"
+                        class="form-input"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,93 +218,120 @@
                 </p>
               </div>
               <div class="section-forms">
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="consignee-first-name"
-                      >Consignee First Name</label
+                <div class="flex justify-end">
+                  <button
+                    class="button accent outlined small"
+                    id="add-new-pickup"
+                  >
+                    Add new pickup point
+                  </button>
+                </div>
+                <div class="shipment-timeline" id="pickup-forms">
+                  <div class="shipment-node pickup-form">
+                    <button
+                      type="button"
+                      class="remove-pickup"
+                      id="remove-pickups"
                     >
-                    <input
-                      value="Anwar"
-                      type="text"
-                      id="consignee-first-name"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="consignee-last-name">Consignee Last Name</label>
-                    <input
-                      value="Adem"
-                      type="text"
-                      id="consignee-last-name"
-                      class="form-input"
-                    />
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="consignee-company">Consignee Company</label>
-                    <input
-                      value="ABC Trading"
-                      type="text"
-                      id="consignee-company"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="consignee-mobile">Consignee Mobile</label>
-                    <input
-                      value="+251909890989"
-                      type="text"
-                      id="consignee-mobile"
-                      class="form-input"
-                    />
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="consignee-email">Consignee Email</label>
-                    <input
-                      value="abctrading@gmail.com"
-                      type="email"
-                      id="consignee-email"
-                      class="form-input"
-                    />
-                  </div>
+                      <i class="fas fa-times"></i>
+                    </button>
+                    <div class="node-content">
+                      <div class="node-header open">
+                        <h3 class="title">
+                          <i class="fas fa-map-marker-alt"></i> Pickup Point
+                        </h3>
+                      </div>
+                      <div class="node-detail">
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="consignee-first-name"
+                              >Consignee First Name</label
+                            >
+                            <input
+                              type="text"
+                              id="consignee-first-name"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="consignee-last-name"
+                              >Consignee Last Name</label
+                            >
+                            <input
+                              type="text"
+                              id="consignee-last-name"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="consignee-company"
+                              >Consignee Company</label
+                            >
+                            <input
+                              type="text"
+                              id="consignee-company"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="consignee-mobile"
+                              >Consignee Mobile</label
+                            >
+                            <input
+                              type="text"
+                              id="consignee-mobile"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="consignee-email">Consignee Email</label>
+                            <input
+                              type="email"
+                              id="consignee-email"
+                              class="form-input"
+                            />
+                          </div>
 
-                  <div class="form-control">
-                    <label for="origin-country">Origin Country</label>
-                    <select id="origin-country" class="form-select">
-                      <option value="">Ethiopia</option>
-                      <option value="">Djibouti</option>
-                      <option value="">United Arab Emirates</option>
-                      <option value="">Saudi Arabia</option>
-                      <option value="">United Kingdom</option>
-                      <option value="">United States of America</option>
-                      <option value="">France</option>
-                      <option value="">Qatar</option>
-                      <option value="">Turkey</option>
-                      <option value="">Germany</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="origin-city">Origin City</label>
-                    <input
-                      value="Addis Ababa"
-                      type="text"
-                      id="origin-city"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="origin-place">Origin Place</label>
-                    <input
-                      value="Piasa"
-                      type="text"
-                      id="origin-place"
-                      class="form-input"
-                    />
+                          <div class="form-control">
+                            <label for="origin-country">Origin Country</label>
+                            <select id="origin-country" class="form-select">
+                              <option value="">Ethiopia</option>
+                              <option value="">Djibouti</option>
+                              <option value="">United Arab Emirates</option>
+                              <option value="">Saudi Arabia</option>
+                              <option value="">United Kingdom</option>
+                              <option value="">United States of America</option>
+                              <option value="">France</option>
+                              <option value="">Qatar</option>
+                              <option value="">Turkey</option>
+                              <option value="">Germany</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="origin-city">Origin City</label>
+                            <input
+                              type="text"
+                              id="origin-city"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="origin-place">Origin Place</label>
+                            <input
+                              type="text"
+                              id="origin-place"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -297,93 +347,129 @@
                 </p>
               </div>
               <div class="section-forms">
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="recipient-first-name"
-                      >Recipient First Name</label
+                <div class="flex justify-end">
+                  <button
+                    class="button accent outlined small"
+                    id="add-new-dropoff"
+                  >
+                    Add new Drop-off point
+                  </button>
+                </div>
+                <div class="shipment-timeline" id="dropoff-forms">
+                  <div class="shipment-node dropoff-form">
+                    <button
+                      type="button"
+                      class="remove-dropoff"
+                      id="remove-dropoffs"
                     >
-                    <input
-                      value="Zenebe"
-                      type="text"
-                      id="recipient-first-name"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="recipient-last-name">Recipient Last Name</label>
-                    <input
-                      value="Gebre"
-                      type="text"
-                      id="recipient-last-name"
-                      class="form-input"
-                    />
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="recipient-company">Recipient Company</label>
-                    <input
-                      value="XYZ Trading"
-                      type="text"
-                      id="recipient-company"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="recipient-mobile">Recipient Mobile</label>
-                    <input
-                      value="+251777898989"
-                      type="text"
-                      id="recipient-mobile"
-                      class="form-input"
-                    />
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="recepient-email">Recipient Email</label>
-                    <input
-                      value="xyztrading@gmail.com"
-                      type="email"
-                      id="recepient-email"
-                      class="form-input"
-                    />
-                  </div>
+                      <i class="fas fa-times"></i>
+                    </button>
+                    <div class="node-content">
+                      <div class="node-header open">
+                        <h3 class="title">
+                          <i class="fas fa-map-marker-alt"></i> Drop-off Point
+                        </h3>
+                      </div>
+                      <div class="node-detail">
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="recipient-first-name"
+                              >Recipient First Name</label
+                            >
+                            <input
+                              type="text"
+                              id="recipient-first-name"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="recipient-last-name"
+                              >Recipient Last Name</label
+                            >
+                            <input
+                              type="text"
+                              id="recipient-last-name"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="recipient-company"
+                              >Recipient Company</label
+                            >
+                            <input
+                              type="text"
+                              id="recipient-company"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="recipient-mobile"
+                              >Recipient Mobile</label
+                            >
+                            <input
+                              type="text"
+                              id="recipient-mobile"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="recipient-email">Recipient Email</label>
+                            <input
+                              type="email"
+                              id="recipient-email"
+                              class="form-input"
+                            />
+                          </div>
 
-                  <div class="form-control">
-                    <label for="destination-country">Destination Country</label>
-                    <select id="destination-country" class="form-select">
-                      <option value="">Ethiopia</option>
-                      <option value="">Djibouti</option>
-                      <option value="">United Arab Emirates</option>
-                      <option value="">Saudi Arabia</option>
-                      <option value="">United Kingdom</option>
-                      <option value="">United States of America</option>
-                      <option value="">France</option>
-                      <option value="">Qatar</option>
-                      <option value="">Turkey</option>
-                      <option value="">Germany</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="even-columns">
-                  <div class="form-control">
-                    <label for="destination-city">Destination City</label>
-                    <input
-                      value="Diredawa"
-                      type="text"
-                      id="destination-city"
-                      class="form-input"
-                    />
-                  </div>
-                  <div class="form-control">
-                    <label for="origin-place">Destination Place</label>
-                    <input
-                      value="Babur tera"
-                      type="text"
-                      id="origin-place"
-                      class="form-input"
-                    />
+                          <div class="form-control">
+                            <label for="destination-country"
+                              >Destination Country</label
+                            >
+                            <select
+                              id="destination-country"
+                              class="form-select"
+                            >
+                              <option value="">Ethiopia</option>
+                              <option value="">Djibouti</option>
+                              <option value="">United Arab Emirates</option>
+                              <option value="">Saudi Arabia</option>
+                              <option value="">United Kingdom</option>
+                              <option value="">United States of America</option>
+                              <option value="">France</option>
+                              <option value="">Qatar</option>
+                              <option value="">Turkey</option>
+                              <option value="">Germany</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="even-columns">
+                          <div class="form-control">
+                            <label for="destination-city"
+                              >Destination City</label
+                            >
+                            <input
+                              type="text"
+                              id="destination-city"
+                              class="form-input"
+                            />
+                          </div>
+                          <div class="form-control">
+                            <label for="destination-place"
+                              >Destination Place</label
+                            >
+                            <input
+                              type="text"
+                              id="destination-place"
+                              class="form-input"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -495,6 +581,71 @@
       </div>
     </main>
     <script type="module" src="../assets/js/dashboard.js"></script>
-    <script></script>
+    <script>
+      const accordion = document.getElementsByClassName("node-header");
+
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+      }
+
+      const firstPickupForm = document.querySelector(".pickup-form");
+      const pickupForms = document.querySelector("#pickup-forms");
+
+      pickupForms.addEventListener("click", function (e) {
+        if (pickupForms.length == 1) return;
+        if (e.target.matches(".remove-pickup")) {
+          pickupForms.removeChild(e.target.parentNode);
+        }
+      });
+
+      const addNewPickup = document.getElementById("add-new-pickup");
+      addNewPickup.addEventListener("click", () => {
+        addNewPickupForm();
+      });
+
+      const addNewPickupForm = () => {
+        const clonedForm = firstPickupForm.cloneNode(true);
+        const clonedHeader = clonedForm.querySelector(".node-header");
+        // const removeBtn = clonedForm.querySelector(".remove-pickup");
+        // removeBtn.addEventListener(("click", () => {}));
+        clonedHeader.addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+        pickupForms.appendChild(clonedForm);
+      };
+
+      //////////dropoff ///////////////////
+
+      const firstDropoffForm = document.querySelector(".dropoff-form");
+      const dropoffForms = document.querySelector("#dropoff-forms");
+
+      dropoffForms.addEventListener("click", function (e) {
+        if (dropoffForms.length == 1) return;
+        if (e.target.matches(".remove-dropoff")) {
+          dropoffForms.removeChild(e.target.parentNode);
+        }
+      });
+
+      const addNewDropoff = document.getElementById("add-new-dropoff");
+      addNewDropoff.addEventListener("click", () => {
+        addNewDropoffForm();
+      });
+
+      const addNewDropoffForm = () => {
+        const clonedForm = firstDropoffForm.cloneNode(true);
+        const clonedHeader = clonedForm.querySelector(".node-header");
+        clonedHeader.addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+        dropoffForms.appendChild(clonedForm);
+      };
+
+      function toggleRecurring() {
+        var div = document.getElementById("recurring-info");
+        div.classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>

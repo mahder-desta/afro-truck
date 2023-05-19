@@ -378,6 +378,7 @@ tbody td {
   border: none;
   border-radius: 0.65rem;
   box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1);
+  z-index: 9 !important;
 }
 
 .modal-lg {
@@ -589,7 +590,68 @@ tbody td {
   color: #a0a0a0;
 }
 
+.shipment-node .remove-pickup, .shipment-node .remove-dropoff  {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--clr-red-400);
+  padding: 6px;
+  height: 30px;
+  width: 30px;
+  background-color: var(--clr-accent-100);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 #shipment-map {
   border-radius: 10px;
   min-height: 350px;
+}
+
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  width: min(350px, 100%) !important;
+}
+
+.radio-input-div {
+  display: flex;
+  position: relative;
+  align-items: center;
+ 
+  
+}
+
+.radio-input-div label:hover {
+  cursor: pointer;
+}
+.radio-input-div input{
+  margin-left: 1rem;
+ }
+
+.radio-input-div label{
+  /* box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1); */
+  position: absolute;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  width: 100% !important;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+.radio-input-div input[type="radio"]:checked+label {
+  border-color: var(--clr-accent-400);
 }

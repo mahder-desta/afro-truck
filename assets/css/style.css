@@ -723,3 +723,7 @@ hr.inverted {
     /* flex-basis: 60%; */
   }
 }
+
+.z-top {
+  z-index: 9999999 !important;
+}

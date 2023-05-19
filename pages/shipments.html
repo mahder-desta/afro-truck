@@ -120,6 +120,7 @@
                   <th>Weight</th>
                   <th>Preferred Vehicle</th>
                   <th>Offer Price</th>
+                  <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -132,15 +133,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge success">Awarded</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -154,15 +151,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge warning">Cargo Loaded</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -176,37 +169,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge primary">Delivered</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td>Addis Ababa</td>
-                  <td>Mekelle</td>
-                  <td>980 KM</td>
-                  <td>1500 KG</td>
-                  <td>Truck (Full)</td>
-                  <td>35000 ETB</td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="button link small flex open-detail-modal">
-                        Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -310,376 +277,123 @@
           <hr style="margin: 0.7rem 0" />
           <div class="form-section">
             <div class="section-title">
-              <h3 class="title">Cargo Detail</h3>
+              <h3 class="title">
+                <span class="icon">
+                  <i class="fas fa-cart-arrow-down"></i>
+                </span>
+                Cargo Detail
+              </h3>
               <p class="description">
                 The Information will be shown publicly. So, be careful what
                 information you provide
               </p>
             </div>
             <div class="section-forms">
-              <div class="form-control">
-                <label for="description">Item Description</label>
-                <input
-                  disabled
-                  type="text"
-                  id="description"
-                  value="Electronics Equipments"
-                  disabled
-                  class="form-input"
-                />
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="weight">Weight in KG</label>
-                  <input
-                    disabled
-                    type="text"
-                    id="weight"
-                    class="form-input"
-                    value="1000"
-                    disabled
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="package-length">Package Length</label>
-                  <input
-                    disabled
-                    value=""
-                    type="text"
-                    id="package-length"
-                    class="form-input"
-                    disabled
-                  />
-                </div>
-              </div>
-
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="package-height">Package Height</label>
-                  <input
-                    disabled
-                    value=""
-                    type="text"
-                    id="package-height"
-                    class="form-input"
-                    disabled
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="package-width">Package Width</label>
-                  <input
-                    disabled
-                    value=""
-                    type="text"
-                    id="package-width"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="pickup-date">Estimated Pickup Date</label>
-                  <input
-                    disabled
-                    value=""
-                    type="date"
-                    id="pickup-date"
-                    value="2023-05-16"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="dropoff-date">Estimated Drop off Date</label>
-                  <input
-                    value=""
-                    type="date"
-                    id="dropoff-date"
-                    class="form-input"
-                    value="2023-05-20"
-                    disabled
-                  />
-                </div>
-              </div>
-              <div class="flex">
-                <input
-                  disabled
-                  value=""
-                  type="checkbox"
-                  id="recurring-shipment"
-                  aria-level="Recurring shipment"
-                  readonly
-                  checked
-                />
-                <label for="recurring-shipment">Recurring Shipment?</label>
-              </div>
-            </div>
-          </div>
-          <hr />
-
-          <div class="form-section">
-            <div class="section-title">
-              <h3 class="title">Pickup Details</h3>
-              <p class="description">
-                The Information will be shown publicly. So, be careful what
-                information you provide
-              </p>
-            </div>
-            <div class="section-forms">
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="consignee-first-name">Consignee First Name</label>
-                  <input
-                    disabled
-                    value="Anwar"
-                    type="text"
-                    id="consignee-first-name"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="consignee-last-name">Consignee Last Name</label>
-                  <input
-                    disabled
-                    value="Adem"
-                    type="text"
-                    id="consignee-last-name"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="consignee-company">Consignee Company</label>
-                  <input
-                    disabled
-                    value="ABC Trading"
-                    type="text"
-                    id="consignee-company"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="consignee-mobile">Consignee Mobile</label>
-                  <input
-                    disabled
-                    value="+251909890989"
-                    type="text"
-                    id="consignee-mobile"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="consignee-email">Consignee Email</label>
-                  <input
-                    disabled
-                    value="abctrading@gmail.com"
-                    type="email"
-                    id="consignee-email"
-                    class="form-input"
-                  />
-                </div>
-
-                <div class="form-control">
-                  <label for="origin-country">Origin Country</label>
-                  <select id="origin-country" class="form-select" disabled>
-                    <option value="">Ethiopia</option>
-                    <option value="">Djibouti</option>
-                    <option value="">United Arab Emirates</option>
-                    <option value="">Saudi Arabia</option>
-                    <option value="">United Kingdom</option>
-                    <option value="">United States of America</option>
-                    <option value="">France</option>
-                    <option value="">Qatar</option>
-                    <option value="">Turkey</option>
-                    <option value="">Germany</option>
-                  </select>
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="origin-city">Origin City</label>
-                  <input
-                    disabled
-                    value="Addis Ababa"
-                    type="text"
-                    id="origin-city"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="origin-place">Origin Place</label>
-                  <input
-                    disabled
-                    value="Piasa"
-                    type="text"
-                    id="origin-place"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-
-          <div class="form-section">
-            <div class="section-title">
-              <h3 class="title">Drop off Details</h3>
-              <p class="description">
-                The Information will be shown publicly. So, be careful what
-                information you provide
-              </p>
-            </div>
-            <div class="section-forms">
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="recipient-first-name">Recipient First Name</label>
-                  <input
-                    disabled
-                    value="Zenebe"
-                    type="text"
-                    id="recipient-first-name"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="recipient-last-name">Recipient Last Name</label>
-                  <input
-                    disabled
-                    value="Gebre"
-                    type="text"
-                    id="recipient-last-name"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="recipient-company">Recipient Company</label>
-                  <input
-                    disabled
-                    value="XYZ Trading"
-                    type="text"
-                    id="recipient-company"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="recipient-mobile">Recipient Mobile</label>
-                  <input
-                    disabled
-                    value="+251777898989"
-                    type="text"
-                    id="recipient-mobile"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="recepient-email">Recipient Email</label>
-                  <input
-                    disabled
-                    value="xyztrading@gmail.com"
-                    type="email"
-                    id="recepient-email"
-                    class="form-input"
-                  />
-                </div>
-
-                <div class="form-control">
-                  <label for="destination-country">Destination Country</label>
-                  <select id="destination-country" class="form-select" disabled>
-                    <option value="">Ethiopia</option>
-                    <option value="">Djibouti</option>
-                    <option value="">United Arab Emirates</option>
-                    <option value="">Saudi Arabia</option>
-                    <option value="">United Kingdom</option>
-                    <option value="">United States of America</option>
-                    <option value="">France</option>
-                    <option value="">Qatar</option>
-                    <option value="">Turkey</option>
-                    <option value="">Germany</option>
-                  </select>
-                </div>
-              </div>
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="destination-city">Destination City</label>
-                  <input
-                    disabled
-                    value="Diredawa"
-                    type="text"
-                    id="destination-city"
-                    class="form-input"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="origin-place">Destination Place</label>
-                  <input
-                    disabled
-                    value="Babur tera"
-                    type="text"
-                    id="origin-place"
-                    class="form-input"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-
-          <div class="form-section">
-            <div class="section-title">
-              <h3 class="title">Vehicle Preference</h3>
-              <p class="description">
-                The Information will be shown publicly. So, be careful what
-                information you provide
-              </p>
-            </div>
-            <div class="section-forms">
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="vehicle-type">Vehicle Type</label>
-                  <select id="vehicle-type" class="form-select" disabled>
-                    <option value="">Car</option>
-                    <option value="">Truck</option>
-                    <option value="">Low bed</option>
-                  </select>
-                </div>
-
-                <div class="form-control">
-                  <label for="vehicle-size">Vehicle Size</label>
-                  <select id="vehicle-size" class="form-select" disabled>
-                    <option value="">Small</option>
-                    <option value="">Medium</option>
-                    <option value="">Large</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="vehicle-specification"
-                    >Vehicle Specification</label
+              <div class="key-value-items">
+                <div class="key-value-item full-width">
+                  <label class="item-key">Item Description:</label>
+                  <span class="item-value"
+                    >Furniture and Alluminium Frames</span
                   >
-                  <select
-                    id="vehicle-specification"
-                    class="form-select"
-                    disabled
-                  >
-                    <option value="">Open</option>
-                    <option value="">Closed</option>
-                  </select>
                 </div>
 
-                <div class="form-control">
-                  <label for="load-type">Load Type</label>
-                  <select id="load-type" class="form-select" disabled>
-                    <option value="">Full</option>
-                    <option value="">Partial</option>
-                  </select>
+                <div class="key-value-item">
+                  <label class="item-key">Weight: </label>
+                  <span class="item-value"> 1000 KG</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Length: </label>
+                  <span class="item-value"> 800 KM</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Height: </label>
+                  <span class="item-value"> --</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Width: </label>
+                  <span class="item-value"> --</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Estimated Pickup Date: </label>
+                  <span class="item-value"> 06/20/2023</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Estimated Drop-off Date: </label>
+                  <span class="item-value"> 06/24/2023</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-value">
+                    <span class="badge success">
+                      <i class="fas fa-check-circle"></i> Recurring Shipment
+                    </span></label
+                  >
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Frequency: </label>
+                  <span class="item-value"> Every 3 days</span>
+                </div>
+                <div class="key-value-item">
+                  <label class="item-key">Recurring End Date: </label>
+                  <span class="item-value"> 06/24/2023</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Base Price: </label>
+                  <span class="item-value">
+                    300,000 Birr <span class="badge primary">Negotiable</span>
+                  </span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Additional Info: </label>
+                  <span class="item-value">
+                    Lorem ipsum dolor sit amet con se ctetur.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="form-section">
+            <div class="section-title">
+              <h3 class="title">
+                <div class="icon"><i class="fas fa-truck"></i></div>
+                Vehicle Preference
+              </h3>
+              <p class="description">
+                The Information will be shown publicly. So, be careful what
+                information you provide
+              </p>
+            </div>
+            <div class="section-forms">
+              <div class="key-value-items">
+                <div class="key-value-item">
+                  <label class="item-key">Vehicle Type: </label>
+                  <span class="item-value"> Truck</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Vehicle Size: </label>
+                  <span class="item-value"> Small</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Specification: </label>
+                  <span class="item-value"> Open</span>
+                </div>
+
+                <div class="key-value-item">
+                  <label class="item-key">Load Type: </label>
+                  <span class="item-value"> Full</span>
                 </div>
               </div>
             </div>
@@ -688,48 +402,420 @@
 
           <div class="form-section">
             <div class="section-title">
-              <h3 class="title">Pricing Option</h3>
+              <h3 class="title">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                Pickup Details
+              </h3>
               <p class="description">
                 The Information will be shown publicly. So, be careful what
                 information you provide
               </p>
             </div>
             <div class="section-forms">
-              <div class="even-columns">
-                <div class="form-control">
-                  <label for="base-price">Base Price</label>
-                  <input
-                    disabled
-                    value="7000"
-                    type="number"
-                    id="base-price"
-                    class="form-input"
-                  />
+              <div class="shipment-timeline">
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Djibouti Terminal 1</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-control">
-                  <label for="additional-info">Additional Info</label>
-                  <input
-                    disabled
-                    value="Urgent"
-                    type="text"
-                    id="additional-info"
-                    class="form-input"
-                  />
+
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Dire Dawa Station</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="flex">
-                <input
-                  disabled
-                  value=""
-                  type="checkbox"
-                  id="price-negotiable"
-                  aria-level="Price negotiable"
-                  readonly
-                  checked
-                />
-                <label for="price-negotiable">Price Negotiable?</label>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Woldiya Store</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Alamata Checkpoint</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Mekelle Warehouse</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          <hr />
+
+          <div class="form-section">
+            <div class="section-title">
+              <h3 class="title">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                Drop-off Details
+              </h3>
+              <p class="description">
+                The Information will be shown publicly. So, be careful what
+                information you provide
+              </p>
+            </div>
+            <div class="section-forms">
+              <div class="shipment-timeline">
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Djibouti Terminal 1</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Dire Dawa Station</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Woldiya Store</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Alamata Checkpoint</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Mekelle Warehouse</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Recipient:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="form-section">
+            <div id="shipment-map"></div>
           </div>
           <hr />
 
@@ -769,6 +855,44 @@
       closeDetailModal.addEventListener("click", () => {
         detailModal.close();
       });
+
+      const accordion = document.getElementsByClassName("node-header");
+
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+      }
+    </script>
+
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs3a9ltOMG62yN0c7jLL8Z51QID2CjtCE&callback=initAutocomplete&libraries=places"
+    ></script>
+
+    <script>
+      var map;
+      var directionsService;
+      var directionsRenderer;
+
+      function initAutocomplete() {
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+
+        var initialPlace = new google.maps.LatLng(
+          8.982110760908736,
+          38.74174928522636
+        );
+        var mapOptions = {
+          zoom: 7,
+          center: initialPlace,
+        };
+        var map = new google.maps.Map(
+          document.getElementById("shipment-map"),
+          mapOptions
+        );
+        directionsRenderer.setMap(map);
+      }
     </script>
   </body>
 </html>
