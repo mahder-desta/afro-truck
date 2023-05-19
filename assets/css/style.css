@@ -698,12 +698,12 @@ hr.inverted {
 
 .key-value-item .item-key {
   color: #9ca3af;
-  min-width: 120px;
+  min-width: 180px;
   /* flex-basis: 40%;s */
 }
 
 .key-value-item .item-value {
-  /* flex-grow: 1; */
+  flex-grow: 1;
   color: #74747c;
   font-weight: var(--fw-semi-bold);
   /* font-size: 16.5px; */
