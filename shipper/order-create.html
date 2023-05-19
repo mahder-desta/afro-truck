@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Order | Afro Trucker</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dashboard">
+    <header class="dashboard-header container-padding">
+      <div class="flex">
+        <a href="../index.html"
+          ><img src="../assets/images/logo.png" alt="Manage"
+        /></a>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="dashboard-navigation"
+          aria-expanded="false"
+        >
+          <img
+            class="icon-hamburger"
+            src="../assets/images/icon-hamburger.svg"
+            alt=""
+          />
+          <img
+            class="icon-close"
+            src="../assets/images/icon-close.svg"
+            alt=""
+          />
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+
+      <nav aria-label="Dashboard">
+        <ul role="list" class="flex">
+          <li>
+            <a href="#"><i class="text-gray-400 fas fa-bell fs-650"></i></a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="text-gray-400 dropdown-toggle"
+              ><i class="fas fa-user-circle fs-700"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Change Password</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs container-padding">
+        <span> Home </span> > <span> My Orders </span> >
+        <span class="active"> Create </span>
+      </div>
+      <div class="dashboard-container container-padding">
+        <aside class="dashboard-navigation" id="dashboard-navigation">
+          <a href="../index.html" class="mobile-nav-logo"
+            ><img src="../assets/images/logo.png" alt="Manage"
+          /></a>
+
+          <ul role="list" class="tab-navigation">
+            <a href="dashboard.html" class="active"
+              ><i class="fas fa-gauge"></i>My Orders</a
+            >
+            <hr />
+
+            <a href="shipper-info.html"
+              ><i class="fas fa-info-circle"></i>Information</a
+            >
+            <a href="documents.html"><i class="fas fa-file"></i>Documents</a>
+          </ul>
+        </aside>
+        <div class="dashboard-main-content container-padding">
+          <h2 class="fs-650 text-heading">
+            <i class="fas fa-plus-circle" aria-hidden="true"></i> Add New Order
+          </h2>
+          <hr />
+          <form onsubmit="return false;">
+            <div class="form-section">
+              <div class="section-title">
+                <h3 class="title">Cargo Detail</h3>
+                <p class="description">
+                  The Information will be shown publicly. So, be careful what
+                  information you provide
+                </p>
+              </div>
+              <div class="section-forms">
+                <div class="form-control">
+                  <label for="description">Item Description</label>
+                  <input type="text" id="description" class="form-input" />
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="weight">Weight in KG</label>
+                    <input type="text" id="weight" class="form-input" />
+                  </div>
+                  <div class="form-control">
+                    <label for="package-length">Package Length</label>
+                    <input type="text" id="package-length" class="form-input" />
+                  </div>
+                </div>
+
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="package-height">Package Height</label>
+                    <input type="text" id="package-height" class="form-input" />
+                  </div>
+                  <div class="form-control">
+                    <label for="package-width">Package Width</label>
+                    <input type="text" id="package-width" class="form-input" />
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="pickup-date">Estimated Pickup Date</label>
+                    <input type="date" id="pickup-date" class="form-input" />
+                  </div>
+                  <div class="form-control">
+                    <label for="dropoff-date">Estimated Drop off Date</label>
+                    <input type="date" id="dropoff-date" class="form-input" />
+                  </div>
+                </div>
+                <div class="flex">
+                  <input
+                    type="checkbox"
+                    id="recurring-shipment"
+                    aria-level="Recurring shipment"
+                    readonly
+                    checked
+                  />
+                  <label for="recurring-shipment">Recurring Shipment?</label>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-section">
+              <div class="section-title">
+                <h3 class="title">Pickup Details</h3>
+                <p class="description">
+                  The Information will be shown publicly. So, be careful what
+                  information you provide
+                </p>
+              </div>
+              <div class="section-forms">
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="consignee-first-name"
+                      >Consignee First Name</label
+                    >
+                    <input
+                      type="text"
+                      id="consignee-first-name"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="consignee-last-name">Consignee Last Name</label>
+                    <input
+                      type="text"
+                      id="consignee-last-name"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="consignee-company">Consignee Company</label>
+                    <input
+                      type="text"
+                      id="consignee-company"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="consignee-mobile">Consignee Mobile</label>
+                    <input
+                      type="text"
+                      id="consignee-mobile"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="consignee-email">Consignee Email</label>
+                    <input
+                      type="email"
+                      id="consignee-email"
+                      class="form-input"
+                    />
+                  </div>
+
+                  <div class="form-control">
+                    <label for="origin-country">Origin Country</label>
+                    <select id="origin-country" class="form-select">
+                      <option value="">Ethiopia</option>
+                      <option value="">Djibouti</option>
+                      <option value="">United Arab Emirates</option>
+                      <option value="">Saudi Arabia</option>
+                      <option value="">United Kingdom</option>
+                      <option value="">United States of America</option>
+                      <option value="">France</option>
+                      <option value="">Qatar</option>
+                      <option value="">Turkey</option>
+                      <option value="">Germany</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="origin-city">Origin City</label>
+                    <input type="text" id="origin-city" class="form-input" />
+                  </div>
+                  <div class="form-control">
+                    <label for="origin-place">Origin Place</label>
+                    <input type="text" id="origin-place" class="form-input" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-section">
+              <div class="section-title">
+                <h3 class="title">Drop off Details</h3>
+                <p class="description">
+                  The Information will be shown publicly. So, be careful what
+                  information you provide
+                </p>
+              </div>
+              <div class="section-forms">
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="recipient-first-name"
+                      >Recipient First Name</label
+                    >
+                    <input
+                      type="text"
+                      id="recipient-first-name"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="recipient-last-name">Recipient Last Name</label>
+                    <input
+                      type="text"
+                      id="recipient-last-name"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="recipient-company">Recipient Company</label>
+                    <input
+                      type="text"
+                      id="recipient-company"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="recipient-mobile">Recipient Mobile</label>
+                    <input
+                      type="text"
+                      id="recipient-mobile"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="recepient-email">Recipient Email</label>
+                    <input
+                      type="email"
+                      id="recepient-email"
+                      class="form-input"
+                    />
+                  </div>
+
+                  <div class="form-control">
+                    <label for="destination-country">Destination Country</label>
+                    <select id="destination-country" class="form-select">
+                      <option value="">Ethiopia</option>
+                      <option value="">Djibouti</option>
+                      <option value="">United Arab Emirates</option>
+                      <option value="">Saudi Arabia</option>
+                      <option value="">United Kingdom</option>
+                      <option value="">United States of America</option>
+                      <option value="">France</option>
+                      <option value="">Qatar</option>
+                      <option value="">Turkey</option>
+                      <option value="">Germany</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="destination-city">Destination City</label>
+                    <input
+                      type="text"
+                      id="destination-city"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="origin-place">Destination Place</label>
+                    <input type="text" id="origin-place" class="form-input" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-section">
+              <div class="section-title">
+                <h3 class="title">Vehicle Preference</h3>
+                <p class="description">
+                  The Information will be shown publicly. So, be careful what
+                  information you provide
+                </p>
+              </div>
+              <div class="section-forms">
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="vehicle-type">Vehicle Type</label>
+                    <select id="vehicle-type" class="form-select">
+                      <option value="">Car</option>
+                      <option value="">Truck</option>
+                      <option value="">Low bed</option>
+                    </select>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="vehicle-size">Vehicle Size</label>
+                    <select id="vehicle-size" class="form-select">
+                      <option value="">Small</option>
+                      <option value="">Medium</option>
+                      <option value="">Large</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="vehicle-specification"
+                      >Vehicle Specification</label
+                    >
+                    <select id="vehicle-specification" class="form-select">
+                      <option value="">Open</option>
+                      <option value="">Closed</option>
+                    </select>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="load-type">Load Type</label>
+                    <select id="load-type" class="form-select">
+                      <option value="">Full</option>
+                      <option value="">Partial</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="form-section">
+              <div class="section-title">
+                <h3 class="title">Pricing Option</h3>
+                <p class="description">
+                  The Information will be shown publicly. So, be careful what
+                  information you provide
+                </p>
+              </div>
+              <div class="section-forms">
+                <div class="even-columns">
+                  <div class="form-control">
+                    <label for="base-price">Base Price</label>
+                    <input type="number" id="base-price" class="form-input" />
+                  </div>
+                  <div class="form-control">
+                    <label for="additional-info">Additional Info</label>
+                    <input
+                      type="text"
+                      id="additional-info"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div class="flex">
+                  <input
+                    value=""
+                    type="checkbox"
+                    id="price-negotiable"
+                    aria-level="Price negotiable"
+                    readonly
+                    checked
+                  />
+                  <label for="price-negotiable">Price Negotiable?</label>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="actions flex justify-between">
+              <a href="dashboard.html" class="button link">Cancel</a>
+              <button type="submit" class="button accent">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../assets/js/dashboard.js"></script>
+    <script></script>
+  </body>
+</html>

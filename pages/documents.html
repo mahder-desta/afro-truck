@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents | Afro Trucker</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+  <body class="dashboard">
+    <header class="dashboard-header container-padding">
+      <div class="flex">
+        <a href="../index.html"
+          ><img src="../assets/images/logo.png" alt="Manage"
+        /></a>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="dashboard-navigation"
+          aria-expanded="false"
+        >
+          <img
+            class="icon-hamburger"
+            src="../assets/images/icon-hamburger.svg"
+            alt=""
+          />
+          <img
+            class="icon-close"
+            src="../assets/images/icon-close.svg"
+            alt=""
+          />
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+
+      <nav aria-label="Dashboard">
+        <ul role="list" class="flex">
+          <li>
+            <a href="#"><i class="text-gray-400 fas fa-bell fs-650"></i></a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="text-gray-400 dropdown-toggle"
+              ><i class="fas fa-user-circle fs-700"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Change Password</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumbs container-padding">
+        <span> Home </span> > <span> Transporters </span> >
+        <span class="active"> Documents </span>
+      </div>
+      <div class="dashboard-container container-padding">
+        <aside class="dashboard-navigation" id="dashboard-navigation">
+          <a href="../index.html" class="mobile-nav-logo"
+            ><img src="../assets/images/logo.png" alt="Manage"
+          /></a>
+
+          <ul role="list" class="tab-navigation">
+            <a href="/pages/dashboard.html"
+              ><i class="fas fa-gauge"></i>Dashboard</a
+            >
+            <a href="marketplace.html"
+              ><i class="fas fa-business-time"></i>Marketplace</a
+            >
+            <a href="shipments.html"
+              ><i class="fas fa-truck"></i>My Shipments</a
+            >
+            <hr class="inverted" />
+            <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
+            <a href="drivers.html"><i class="fas fa-users"></i>Drivers</a>
+            <a href="transporter-info.html"
+              ><i class="fas fa-info-circle"></i>Info</a
+            >
+            <a href="documents.html" class="active"
+              ><i class="fas fa-file"></i>Documents</a
+            >
+          </ul>
+        </aside>
+        <div class="dashboard-main-content container-padding">
+          <!-- <div class="page-heading-wrapper">
+            <div class="search-bar rounded">
+              <input
+                placeholder="Search"
+                aria-label="Search"
+                class="form-input rounded"
+                type="text"
+              />
+              <button aria-label="submit search" class="button rounded">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+            <a class="button link" href=""
+              ><i class="fas fa-plus-circle"></i> Add Vehicle</a
+            >
+          </div> -->
+          <div class="responsive-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Document type</th>
+                  <th>Description</th>
+
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transporter trade License</td>
+                  <td>Trade License</td>
+
+                  <td><span class="badge secondary">Pending</span></td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button link small flex open-preview-modal">
+                        <i class="fa fa-eye" aria-hidden="true"></i> Preview
+                      </button>
+                      <button
+                        class="button accent outlined flex small open-replace-modal"
+                      >
+                        <i class="fa fa-upload" aria-hidden="true"></i> Replace
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Transporter owner Id</td>
+                  <td>
+                    Identification Document of the owner. e.g. Passport,
+                    National ID, Driving License
+                  </td>
+
+                  <td><span class="badge success">Approved</span></td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button link small flex open-preview-modal">
+                        <i class="fa fa-eye" aria-hidden="true"></i>Preview
+                      </button>
+                      <button
+                        class="button flex accent outlined small open-replace-modal"
+                      >
+                        <i class="fa fa-upload" aria-hidden="true"></i>Replace
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <dialog class="modal" id="preview-modal">
+        <h2 class="header">View transporter trade license document</h2>
+        <hr style="margin: 0.7rem 0" />
+        <div style="text-align: right">
+          <button class="button accent small outlined">
+            <div class="flex">
+              <i class="fa fa-download" aria-hidden="true"></i> Download
+            </div>
+          </button>
+        </div>
+        <div class="preview-container">
+          <i class="fas fa-file preview-file"></i>
+        </div>
+        <div style="text-align: right">
+          <button class="button link small" id="close-preview-modal">
+            Close
+          </button>
+        </div>
+      </dialog>
+
+      <dialog class="modal" id="replace-modal">
+        <form method="dialog">
+          <h2 class="header">Upload transporter trade license document</h2>
+          <hr style="margin: 0.7rem 0" />
+          <div class="form-control">
+            <label for="issued-date">Issued date</label>
+            <input type="date" id="issued-date" class="form-input" />
+          </div>
+          <div class="form-control">
+            <label for="expiration-date">Expiration date</label>
+
+            <input type="date" id="expiration-date" class="form-input" />
+          </div>
+
+          <div class="form-control">
+            <label for="select-file">Select file</label>
+
+            <input type="file" id="select-file" class="form-input" />
+            <p class="description">
+              * Allowed file types are pdf, jpg, jpeg, and png
+            </p>
+          </div>
+
+          <div class="actions">
+            <button class="button link" id="close-replace-modal">Cancel</button>
+
+            <button type="submit" class="button accent">Submit</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+    <script type="module" src="../assets/js/dashboard.js"></script>
+    <script>
+      const previewModal = document.querySelector("#preview-modal");
+      openPreviewModal = document.querySelectorAll(".open-preview-modal");
+      closePreviewModal = document.querySelector("#close-preview-modal");
+
+      openPreviewModal.forEach((element) => {
+        element.addEventListener("click", () => {
+          previewModal.showModal();
+        });
+      });
+
+      closePreviewModal.addEventListener("click", () => {
+        previewModal.close();
+      });
+
+      const replaceModal = document.querySelector("#replace-modal");
+      openPreviewModal = document.querySelectorAll(".open-replace-modal");
+      closePreviewModal = document.querySelector("#close-replace-modal");
+
+      openPreviewModal.forEach((element) => {
+        element.addEventListener("click", () => {
+          replaceModal.showModal();
+        });
+      });
+
+      closePreviewModal.addEventListener("click", () => {
+        replaceModal.close();
+      });
+    </script>
+  </body>
+</html>
