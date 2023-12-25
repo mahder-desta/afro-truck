@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New Driver | Afro Trucker</title>
+    <title>Drivers | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -63,14 +63,13 @@
     </header>
     <main>
       <div class="breadcrumbs container-padding">
-        <span> Home </span> > <span> Transporters </span> >
-        <span> Drivers </span> >
-        <span class="active"> Create </span>
+        <span> Home </span> > <span> Transporter </span> >
+        <span class="active"> Drivers </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
@@ -95,31 +94,78 @@
           </ul>
         </aside>
         <div class="dashboard-main-content container-padding">
-          <h2 class="fs-650 text-heading">
-            <i class="fas fa-plus-circle" aria-hidden="true"></i> Add New Driver
-          </h2>
-          <hr />
-          <form onsubmit="return false">
-            <div class="container-small">
-              <div class="form-control">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-input" />
-              </div>
-
-              <div class="form-control">
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" class="form-input" />
-              </div>
-              <div class="flex justify-end">
-                <a href="drivers.html" class="button link">Cancel</a>
-                <button type="submit" class="button accent">Submit</button>
-              </div>
+          <div class="page-heading-wrapper">
+            <div class="search-bar">
+              <input
+                placeholder="Search"
+                aria-label="Search"
+                class="form-input"
+                type="text"
+              />
+              <button aria-label="submit search " class="button accent">
+                <i class="fas fa-search"></i> Search
+              </button>
             </div>
-          </form>
+            <a class="button link" href="driver-create.html"
+              ><i class="fas fa-plus-circle"></i> Add Driver</a
+            >
+          </div>
+          <div class="responsive-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <a href="driver-detail-general.html" class="fs-300"
+                      >Mahder Desta Bayru
+                    </a>
+                  </td>
+                  <td>mahder@gmail.com</td>
+                  <td>+251900989098</td>
+                  <td>
+                    <span class="badge secondary">Pending</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <a href="driver-detail-general.html" class="fs-300"
+                      >Yohhanes Lilay Hayle
+                    </a>
+                  </td>
+                  <td>yohannes@gmail.com</td>
+                  <td>+25190098978</td>
+                  <td>
+                    <span class="badge success">Approved</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <a href="driver-detail-general.html" class="fs-300"
+                      >Temesgen Tadese Wendm
+                    </a>
+                  </td>
+                  <td>temesgen@gmail.com</td>
+                  <td>+2519007800</td>
+                  <td>
+                    <span class="badge error">Declined</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </main>

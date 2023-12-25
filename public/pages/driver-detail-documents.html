@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documents | Afro Trucker</title>
+    <title>Driver Documents | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -63,83 +63,77 @@
     </header>
     <main>
       <div class="breadcrumbs container-padding">
-        <span> Home </span> >
-        <span class="active"> Documents </span>
+        <span> Home </span> > <span> Transporters </span> >
+        <span> Drivers </span> >
+        <span class="active"> 7860 </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
-            <a href="dashboard.html"><i class="fas fa-gauge"></i>My Orders</a>
-            <hr />
-
-            <a href="shipper-info.html"
-              ><i class="fas fa-info-circle"></i>Information</a
+            <a href="/pages/dashboard.html"
+              ><i class="fas fa-gauge"></i>Dashboard</a
             >
-            <a href="documents.html" class="active"
-              ><i class="fas fa-file"></i>Documents</a
+            <a href="marketplace.html"
+              ><i class="fas fa-business-time"></i>Marketplace</a
             >
+            <a href="shipments.html"
+              ><i class="fas fa-truck"></i>My Shipments</a
+            >
+            <hr class="inverted" />
+            <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
+            <a href="drivers.html" class="active"
+              ><i class="fas fa-users"></i>Drivers</a
+            >
+            <a href="transporter-info.html"
+              ><i class="fas fa-info-circle"></i>Info</a
+            >
+            <a href="documents.html"><i class="fas fa-file"></i>Documents</a>
           </ul>
         </aside>
         <div class="dashboard-main-content container-padding">
-          <!-- <div class="page-heading-wrapper">
-            <div class="search-bar rounded">
-              <input
-                placeholder="Search"
-                aria-label="Search"
-                class="form-input rounded"
-                type="text"
-              />
-              <button aria-label="submit search" class="button rounded">
-                <i class="fas fa-search"></i> Search
+          <div class="flex justify-between">
+            <h3 class="fs-secondary-heading">
+              <i class="fa fa-user-circle"></i> Mahder Desta Bayru
+            </h3>
+
+            <div class="flex justify-end">
+              <a href="driver-edit.html" class="button link">
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+              </a>
+
+              <button class="button error outlined" id="open-delete-modal">
+                <i class="fa fa-trash" aria-hidden="true"></i> Delete
               </button>
             </div>
-            <a class="button link" href=""
-              ><i class="fas fa-plus-circle"></i> Add Vehicle</a
-            >
-          </div> -->
+          </div>
+          <hr />
+
+          <ul role="list" class="tabs">
+            <a href="driver-detail-general.html">General</a>
+
+            <a href="driver-detail-documents.html" class="active">Documents</a>
+            <a href="driver-detail-shipments.html">Shipments</a>
+          </ul>
           <div class="responsive-table">
             <table>
               <thead>
                 <tr>
                   <th>Document type</th>
                   <th>Description</th>
-
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Personal ID</td>
-                  <td>
-                    Identification Document of the owner. e.g. Passport,
-                    National ID, Driving License
-                  </td>
-
+                  <td>Driver License</td>
+                  <td>Valid Driving License Document</td>
                   <td><span class="badge success">Approved</span></td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="button link small flex open-preview-modal">
-                        <i class="fa fa-eye" aria-hidden="true"></i>Preview
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-replace-modal"
-                      >
-                        <i class="fa fa-upload" aria-hidden="true"></i>Replace
-                      </button>
-                    </div>
-                  </td>
-                </tr>
 
-                <tr>
-                  <td>Company License Document</td>
-                  <td>Company License</td>
-
-                  <td><span class="badge secondary">Pending</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-preview-modal">
@@ -153,13 +147,54 @@
                     </div>
                   </td>
                 </tr>
+
+                <tr>
+                  <td>Driver ID</td>
+                  <td>
+                    Identification document of the driver eg: Passport, National
+                    ID, Driving License
+                  </td>
+
+                  <td><span class="badge secondary">Pending</span></td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="button link small flex open-preview-modal">
+                        <i class="fa fa-eye" aria-hidden="true"></i>Preview
+                      </button>
+                      <button
+                        class="button flex accent outlined small open-replace-modal"
+                      >
+                        <i class="fa fa-upload" aria-hidden="true"></i>Replace
+                      </button>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
+
+      <!-- Delete Modal -->
+      <dialog class="modal" id="delete-modal">
+        <form method="dialog">
+          <h2 class="header">Are you sure you want to delete?</h2>
+          <hr />
+          <p>You can not restore it.</p>
+
+          <div class="flex justify-end">
+            <button class="button link" id="close-delete-modal">Cancel</button>
+
+            <button class="button accent" type="submit">
+              <i class="fa fa-trash" aria-hidden="true"></i> Delete
+            </button>
+          </div>
+        </form>
+      </dialog>
+
+      <!-- Document view and replace modals -->
       <dialog class="modal" id="preview-modal">
-        <h2 class="header">View Personal ID document</h2>
+        <h2 class="header">View Driver License document</h2>
         <hr style="margin: 0.7rem 0" />
         <div style="text-align: right">
           <button class="button accent small outlined">
@@ -180,7 +215,7 @@
 
       <dialog class="modal" id="replace-modal">
         <form method="dialog">
-          <h2 class="header">Upload Personal ID document</h2>
+          <h2 class="header">Upload Driver License document</h2>
           <hr style="margin: 0.7rem 0" />
           <div class="form-control">
             <label for="issued-date">Issued date</label>
@@ -211,6 +246,20 @@
     </main>
     <script type="module" src="../assets/js/dashboard.js"></script>
     <script>
+      const deleteModal = document.querySelector("#delete-modal");
+      openDeleteModal = document.querySelectorAll("#open-delete-modal");
+      closeDeleteModal = document.querySelector("#close-delete-modal");
+
+      openDeleteModal.forEach((element) => {
+        element.addEventListener("click", () => {
+          deleteModal.showModal();
+        });
+      });
+
+      closeDeleteModal.addEventListener("click", () => {
+        deleteModal.close();
+      });
+
       const previewModal = document.querySelector("#preview-modal");
       openPreviewModal = document.querySelectorAll(".open-preview-modal");
       closePreviewModal = document.querySelector("#close-preview-modal");

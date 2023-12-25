@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Order | Afro Trucker</title>
+    <title>Create Order | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -63,13 +63,13 @@
     </header>
     <main>
       <div class="breadcrumbs container-padding">
-        <span> Home </span> > <span> My Orders </span> > <span> 576823 </span> >
-        <span class="active"> Edit </span>
+        <span> Home </span> > <span> My Orders </span> >
+        <span class="active"> Create </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
@@ -86,7 +86,7 @@
         </aside>
         <div class="dashboard-main-content container-padding">
           <h2 class="fs-650 text-heading">
-            <i class="fas fa-edit" aria-hidden="true"></i> Update Order
+            <i class="fas fa-plus-circle" aria-hidden="true"></i> Add New Order
           </h2>
           <hr />
           <form onsubmit="return false;">
@@ -101,77 +101,39 @@
               <div class="section-forms">
                 <div class="form-control">
                   <label for="description">Item Description</label>
-                  <input
-                    type="text"
-                    id="description"
-                    value="Electronics Equipments"
-                    class="form-input"
-                  />
+                  <input type="text" id="description" class="form-input" />
                 </div>
                 <div class="even-columns">
                   <div class="form-control">
                     <label for="weight">Weight in KG</label>
-                    <input
-                      type="text"
-                      id="weight"
-                      class="form-input"
-                      value="1000"
-                    />
+                    <input type="text" id="weight" class="form-input" />
                   </div>
                   <div class="form-control">
                     <label for="package-length">Package Length</label>
-                    <input
-                      value=""
-                      type="text"
-                      id="package-length"
-                      class="form-input"
-                    />
+                    <input type="text" id="package-length" class="form-input" />
                   </div>
                 </div>
 
                 <div class="even-columns">
                   <div class="form-control">
                     <label for="package-height">Package Height</label>
-                    <input
-                      value=""
-                      type="text"
-                      id="package-height"
-                      class="form-input"
-                    />
+                    <input type="text" id="package-height" class="form-input" />
                   </div>
                   <div class="form-control">
                     <label for="package-width">Package Width</label>
-                    <input
-                      value=""
-                      type="text"
-                      id="package-width"
-                      class="form-input"
-                    />
+                    <input type="text" id="package-width" class="form-input" />
                   </div>
                 </div>
                 <div class="even-columns">
                   <div class="form-control">
                     <label for="pickup-date">Estimated Pickup Date</label>
-                    <input
-                      value=""
-                      type="date"
-                      id="pickup-date"
-                      value="2023-05-16"
-                      class="form-input"
-                    />
+                    <input type="date" id="pickup-date" class="form-input" />
                   </div>
                   <div class="form-control">
                     <label for="dropoff-date">Estimated Drop off Date</label>
-                    <input
-                      value=""
-                      type="date"
-                      id="dropoff-date"
-                      class="form-input"
-                      value="2023-05-20"
-                    />
+                    <input type="date" id="dropoff-date" class="form-input" />
                   </div>
                 </div>
-
                 <div class="flex">
                   <input
                     type="checkbox"
@@ -228,13 +190,7 @@
                 </div>
                 <div class="shipment-timeline" id="pickup-forms">
                   <div class="shipment-node pickup-form">
-                    <button
-                      type="button"
-                      class="remove-pickup"
-                      id="remove-pickups"
-                    >
-                      x
-                    </button>
+                    <button class="remove-pickup" id="remove-pickups">x</button>
                     <div class="node-content">
                       <div class="node-header open">
                         <h3 class="title">
@@ -327,6 +283,7 @@
                               type="text"
                               id="origin-place"
                               class="form-input"
+                              placeholder=""
                             />
                           </div>
                         </div>
@@ -465,6 +422,7 @@
                               type="text"
                               id="destination-place"
                               class="form-input"
+                              placeholder=""
                             />
                           </div>
                         </div>
@@ -540,17 +498,11 @@
                 <div class="even-columns">
                   <div class="form-control">
                     <label for="base-price">Base Price</label>
-                    <input
-                      value="7000"
-                      type="number"
-                      id="base-price"
-                      class="form-input"
-                    />
+                    <input type="number" id="base-price" class="form-input" />
                   </div>
                   <div class="form-control">
                     <label for="additional-info">Additional Info</label>
                     <input
-                      value="Urgent"
                       type="text"
                       id="additional-info"
                       class="form-input"
@@ -581,6 +533,23 @@
       </div>
     </main>
     <script type="module" src="../assets/js/dashboard.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=your-googlemaps-api-key&callback=initAutocomplete&libraries=places"
+    ></script>
+    <script>
+      function initAutocomplete() {
+        var origin_input = document.getElementById("origin-place");
+
+        var originSearchBox = new google.maps.places.Autocomplete(origin_input);
+
+        var destination_input = document.getElementById("destination-place");
+
+        var destinationSearchBox = new google.maps.places.Autocomplete(
+          destination_input
+        );
+      }
+    </script>
     <script>
       const accordion = document.getElementsByClassName("node-header");
 

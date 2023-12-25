@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace | Afro Trucker</title>
+    <title>Driver Shipments | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -63,20 +63,21 @@
     </header>
     <main>
       <div class="breadcrumbs container-padding">
-        <span> Home </span> > <span> Marketplace </span> >
-        <span class="active"> Orders </span>
+        <span> Home </span> > <span> Transporters </span> >
+        <span> Drivers </span> >
+        <span class="active"> 7860 </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
             <a href="/pages/dashboard.html"
               ><i class="fas fa-gauge"></i>Dashboard</a
             >
-            <a href="marketplace.html" class="active"
+            <a href="marketplace.html"
               ><i class="fas fa-business-time"></i>Marketplace</a
             >
             <a href="shipments.html"
@@ -84,7 +85,9 @@
             >
             <hr class="inverted" />
             <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
-            <a href="drivers.html"><i class="fas fa-users"></i>Drivers</a>
+            <a href="drivers.html" class="active"
+              ><i class="fas fa-users"></i>Drivers</a
+            >
             <a href="transporter-info.html"
               ><i class="fas fa-info-circle"></i>Info</a
             >
@@ -92,26 +95,29 @@
           </ul>
         </aside>
         <div class="dashboard-main-content container-padding">
-          <div class="page-heading-wrapper">
-            <div class="search-bar roundeds">
-              <input
-                placeholder="Search"
-                aria-label="Search"
-                class="form-input roundeds"
-                type="text"
-                id="search-input"
-              />
-              <button
-                aria-label="submit search "
-                class="button accent roundeds"
-              >
-                <i class="fas fa-search"></i> Search
+          <div class="flex justify-between">
+            <h3 class="fs-secondary-heading">
+              <i class="fa fa-user-circle"></i> Mahder Desta Bayru
+            </h3>
+
+            <div class="flex justify-end">
+              <a href="driver-edit.html" class="button link">
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+              </a>
+
+              <button class="button error outlined" id="open-delete-modal">
+                <i class="fa fa-trash" aria-hidden="true"></i> Delete
               </button>
             </div>
-            <button class="button accent open-search-modal">
-              <i class="fas fa-search-plus"></i> Advanced Search
-            </button>
           </div>
+          <hr />
+          <ul role="list" class="tabs">
+            <a href="driver-detail-general.html">General</a>
+
+            <a href="driver-detail-documents.html">Documents</a>
+            <a href="driver-detail-shipments.html" class="active">Shipments</a>
+          </ul>
+
           <div class="responsive-table">
             <table>
               <thead>
@@ -124,6 +130,7 @@
                   <th>Weight</th>
                   <th>Preferred Vehicle</th>
                   <th>Offer Price</th>
+                  <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -136,15 +143,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge success">Awarded</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -158,15 +161,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge warning">Cargo Loaded</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -180,37 +179,11 @@
                   <td>1500 KG</td>
                   <td>Truck (Full)</td>
                   <td>35000 ETB</td>
+                  <td><span class="badge primary">Delivered</span></td>
                   <td>
                     <div class="action-buttons">
                       <button class="button link small flex open-detail-modal">
                         Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td>Addis Ababa</td>
-                  <td>Mekelle</td>
-                  <td>980 KM</td>
-                  <td>1500 KG</td>
-                  <td>Truck (Full)</td>
-                  <td>35000 ETB</td>
-                  <td>
-                    <div class="action-buttons">
-                      <button class="button link small flex open-detail-modal">
-                        Detail
-                      </button>
-                      <button
-                        class="button flex accent outlined small open-bid-modal"
-                      >
-                        Place your Offer
                       </button>
                     </div>
                   </td>
@@ -221,85 +194,6 @@
         </div>
       </div>
 
-      <dialog class="modal modal-lg" id="search-modal">
-        <form method="dialog">
-          <h2 class="header">Advanced Search</h2>
-          <hr style="margin: 0.7rem 0" />
-          <div class="even-columns">
-            <div>
-              <div class="form-control" style="position: relative">
-                <label for="origin">Origin</label>
-                <input type="text" id="origin-input" class="form-input" />
-                <i
-                  class="fas fa-map-marker-alt"
-                  style="position: absolute; right: 12px; top: 55%"
-                ></i>
-              </div>
-
-              <div class="form-control">
-                <label for="dh-o">DH-O</label>
-                <input type="text" id="dh-o" class="form-input" />
-              </div>
-
-              <div class="form-control" style="position: relative">
-                <label for="destination">Destination</label>
-                <input type="text" id="destination-input" class="form-input" />
-                <i
-                  class="fas fa-map-marker-alt"
-                  style="position: absolute; right: 12px; top: 55%"
-                ></i>
-              </div>
-
-              <div class="form-control">
-                <label for="DH-D">DH-D</label>
-                <input type="text" id="DH-D" class="form-input" />
-              </div>
-
-              <div class="form-control">
-                <label for="length">Length(m)</label>
-                <input type="text" id="length" class="form-input" />
-              </div>
-            </div>
-            <div>
-              <div class="form-control">
-                <label for="weight">Weight</label>
-                <input type="text" id="weight" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="load-type">Load Type</label>
-                <select id="load-type" class="form-select">
-                  <option value="">Full</option>
-                  <option value="">Partial</option>
-                </select>
-              </div>
-              <div class="form-control">
-                <label for="look-back">Look Back</label>
-                <input type="text" id="look-back" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="start-date">Start Date</label>
-                <input type="date" id="start-date" class="form-input" />
-              </div>
-
-              <div class="flex">
-                <input
-                  type="checkbox"
-                  id="save-search"
-                  aria-level="Save Search"
-                />
-                <label for="save-search">Save Search</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="actions">
-            <button class="button link" id="close-search-modal">Cancel</button>
-
-            <button type="submit" class="button accent">Search</button>
-          </div>
-        </form>
-      </dialog>
-
       <dialog class="modal modal-lg" id="detail-modal">
         <form method="dialog">
           <div class="flex">
@@ -307,7 +201,6 @@
             <span class="badge primary">Confirmed</span>
           </div>
           <hr style="margin: 0.7rem 0" />
-
           <div class="form-section">
             <div class="section-title">
               <h3 class="title">
@@ -851,60 +744,15 @@
             <div id="shipment-map"></div>
           </div>
           <hr />
+
           <div class="actions">
             <button class="button link" id="close-detail-modal">Close</button>
-          </div>
-        </form>
-      </dialog>
-
-      <dialog class="modal" id="bid-modal">
-        <form method="dialog">
-          <h2 class="header">Enter your bid offer amount</h2>
-          <hr style="margin: 0.7rem 0" />
-          <div class="form-control">
-            <label for="bid-amount">Offer Amount</label>
-            <input type="number" id="bid-amount" class="form-input" />
-          </div>
-
-          <div class="actions">
-            <button class="button link" id="close-bid-modal">Cancel</button>
-
-            <button type="submit" class="button accent">Submit</button>
           </div>
         </form>
       </dialog>
     </main>
     <script type="module" src="../assets/js/dashboard.js"></script>
     <script>
-      const searchModal = document.querySelector("#search-modal");
-      openSearchModal = document.querySelectorAll(".open-search-modal");
-      closeSearchModal = document.querySelector("#close-search-modal");
-
-      openSearchModal.forEach((element) => {
-        element.addEventListener("click", () => {
-          searchModal.showModal();
-        });
-      });
-
-      closeSearchModal.addEventListener("click", () => {
-        searchModal.close();
-      });
-
-      // Bid Modal
-      const bidModal = document.querySelector("#bid-modal");
-      openBidModal = document.querySelectorAll(".open-bid-modal");
-      closeBidModal = document.querySelector("#close-bid-modal");
-
-      openBidModal.forEach((element) => {
-        element.addEventListener("click", () => {
-          bidModal.showModal();
-        });
-      });
-
-      closeBidModal.addEventListener("click", () => {
-        bidModal.close();
-      });
-
       //Detail Modal
       const detailModal = document.querySelector("#detail-modal");
       openDetailModal = document.querySelectorAll(".open-detail-modal");
@@ -919,7 +767,6 @@
       closeDetailModal.addEventListener("click", () => {
         detailModal.close();
       });
-
       const accordion = document.getElementsByClassName("node-header");
 
       for (i = 0; i < accordion.length; i++) {
@@ -940,16 +787,6 @@
       var directionsRenderer;
 
       function initAutocomplete() {
-        var origin_input = document.getElementById("origin-input");
-
-        var originSearchBox = new google.maps.places.Autocomplete(origin_input);
-
-        var destination_input = document.getElementById("destination-input");
-
-        var destinationSearchBox = new google.maps.places.Autocomplete(
-          destination_input
-        );
-
         var directionsService = new google.maps.DirectionsService();
         var directionsRenderer = new google.maps.DirectionsRenderer();
 

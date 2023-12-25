@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -69,7 +69,7 @@
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
@@ -83,10 +83,10 @@
               ><i class="fas fa-truck"></i>My Shipments</a
             >
             <hr class="inverted" />
-            <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
-            <a href="drivers.html" class="active"
-              ><i class="fas fa-users"></i>Drivers</a
+            <a href="vehicles.html" class="active"
+              ><i class="fas fa-car"></i>Vehicles</a
             >
+            <a href="drivers.html"><i class="fas fa-users"></i>Drivers</a>
             <a href="transporter-info.html"
               ><i class="fas fa-info-circle"></i>Info</a
             >
@@ -94,22 +94,35 @@
           </ul>
         </aside>
         <div class="dashboard-main-content container-padding">
-          <div class="page-heading-wrapper">
-            <div class="search-bar">
-              <input
-                placeholder="Search"
-                aria-label="Search"
-                class="form-input"
-                type="text"
-              />
-              <button aria-label="submit search " class="button accent">
-                <i class="fas fa-search"></i> Search
+          <div class="flex justify-between">
+            <h3 class="fs-secondary-heading flex">
+              <i class="fas fa-truck"></i> ET-78543
+            </h3>
+            <div class="flex justify-end">
+              <a href="vehicle-edit.html" class="button link">
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+              </a>
+              <button
+                href="vehicle-edit.html"
+                class="button link"
+                id="open-assign-modal"
+              >
+                <i class="fa fa-user" aria-hidden="true"></i> Assign Driver
+              </button>
+              <button class="button error outlined" id="open-delete-modal">
+                <i class="fa fa-trash" aria-hidden="true"></i> Delete
               </button>
             </div>
-            <a class="button link" href="driver-create.html"
-              ><i class="fas fa-plus-circle"></i> Add Driver</a
-            >
           </div>
+
+          <hr />
+
+          <ul role="list" class="tabs">
+            <a href="vehicle-detail-general.html">General</a>
+
+            <a href="vehicle-detail-documents.html">Documents</a>
+            <a href="vehicle-detail-drivers.html" class="active">Drivers</a>
+          </ul>
           <div class="responsive-table">
             <table>
               <thead>
@@ -132,7 +145,7 @@
                   <td>mahder@gmail.com</td>
                   <td>+251900989098</td>
                   <td>
-                    <span class="badge secondary">Pending</span>
+                    <span class="badge success">Active</span>
                   </td>
                 </tr>
 
@@ -146,7 +159,7 @@
                   <td>yohannes@gmail.com</td>
                   <td>+25190098978</td>
                   <td>
-                    <span class="badge success">Approved</span>
+                    <span class="badge secondary">Inactive</span>
                   </td>
                 </tr>
 
@@ -160,7 +173,7 @@
                   <td>temesgen@gmail.com</td>
                   <td>+2519007800</td>
                   <td>
-                    <span class="badge error">Declined</span>
+                    <span class="badge secondary">Inactive</span>
                   </td>
                 </tr>
               </tbody>

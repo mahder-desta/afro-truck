@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Driver Details | Afro Trucker</title>
+    <title>Vehicle Details | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -64,13 +64,13 @@
     <main>
       <div class="breadcrumbs container-padding">
         <span> Home </span> > <span> Transporters </span> >
-        <span> Drivers </span> >
-        <span class="active"> 7860 </span>
+        <span> Vehicles </span> >
+        <span class="active"> 21801 </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
@@ -84,10 +84,10 @@
               ><i class="fas fa-truck"></i>My Shipments</a
             >
             <hr class="inverted" />
-            <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
-            <a href="drivers.html" class="active"
-              ><i class="fas fa-users"></i>Drivers</a
+            <a href="vehicles.html" class="active"
+              ><i class="fas fa-car"></i>Vehicles</a
             >
+            <a href="drivers.html"><i class="fas fa-users"></i>Drivers</a>
             <a href="transporter-info.html"
               ><i class="fas fa-info-circle"></i>Info</a
             >
@@ -96,43 +96,81 @@
         </aside>
         <div class="dashboard-main-content container-padding">
           <div class="flex justify-between">
-            <h3 class="fs-secondary-heading">
-              <i class="fa fa-user-circle"></i> Mahder Desta Bayru
+            <h3 class="fs-secondary-heading flex">
+              <i class="fas fa-truck"></i> ET-78543
             </h3>
-
             <div class="flex justify-end">
-              <a href="driver-edit.html" class="button link">
+              <a href="vehicle-edit.html" class="button link">
                 <i class="fa fa-pencil" aria-hidden="true"></i> Edit
               </a>
-
+              <button
+                href="vehicle-edit.html"
+                class="button link"
+                id="open-assign-modal"
+              >
+                <i class="fa fa-user" aria-hidden="true"></i> Assign Driver
+              </button>
               <button class="button error outlined" id="open-delete-modal">
                 <i class="fa fa-trash" aria-hidden="true"></i> Delete
               </button>
             </div>
           </div>
+
           <hr />
 
           <ul role="list" class="tabs">
-            <a href="driver-detail-general.html" class="active">General</a>
+            <a href="vehicle-detail-general.html" class="active">General</a>
 
-            <a href="driver-detail-documents.html">Documents</a>
-            <a href="driver-detail-shipments.html">Shipments</a>
+            <a href="vehicle-detail-documents.html">Documents</a>
+            <a href="vehicle-detail-drivers.html">Drivers</a>
           </ul>
           <div class="even-columns">
             <div class="responsive-table">
               <table>
                 <tbody>
                   <tr>
-                    <th>Name:</th>
-                    <td>Mahder Desta Bayru</td>
+                    <th>Model:</th>
+                    <td>Vi-9089</td>
                   </tr>
                   <tr>
-                    <th>Email:</th>
-                    <td>mahder@gmail.com</td>
+                    <th>Plate Number:</th>
+                    <td>ET-78543</td>
                   </tr>
                   <tr>
-                    <th>Phone Number:</th>
-                    <td>+251908731412</td>
+                    <th>Truck Type:</th>
+                    <td>Semi Trailer Truck</td>
+                  </tr>
+                  <tr>
+                    <th>Chassis Number:</th>
+                    <td>89727</td>
+                  </tr>
+                  <tr>
+                    <th>Manufactured Date:</th>
+                    <td>2020-05-12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="responsive-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Motor Capacity:</th>
+                    <td>3000</td>
+                  </tr>
+
+                  <tr>
+                    <th>Load Capacity:</th>
+                    <td>5000</td>
+                  </tr>
+                  <tr>
+                    <th>Accel Number:</th>
+                    <td>9734</td>
+                  </tr>
+
+                  <tr>
+                    <th>Driver:</th>
+                    <td>Mahder Desta</td>
                   </tr>
 
                   <tr>

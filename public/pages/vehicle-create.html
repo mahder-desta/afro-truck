@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transporter Information | Afro Trucker</title>
+    <title>Add New Vehicle | Afro Trucker</title>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
     <header class="dashboard-header container-padding">
       <div class="flex">
         <a href="../index.html"
-          ><img src="../assets/images/logo.png" alt="Manage"
+          ><img src="../assets/images/logo.png" alt="Afro Truck"
         /></a>
 
         <button
@@ -64,12 +64,13 @@
     <main>
       <div class="breadcrumbs container-padding">
         <span> Home </span> > <span> Transporters </span> >
-        <span class="active"> Info </span>
+        <span> Vehicles </span> >
+        <span class="active"> Create </span>
       </div>
       <div class="dashboard-container container-padding">
         <aside class="dashboard-navigation" id="dashboard-navigation">
           <a href="../index.html" class="mobile-nav-logo"
-            ><img src="../assets/images/logo.png" alt="Manage"
+            ><img src="../assets/images/logo.png" alt="Afro Truck"
           /></a>
 
           <ul role="list" class="tab-navigation">
@@ -83,91 +84,79 @@
               ><i class="fas fa-truck"></i>My Shipments</a
             >
             <hr class="inverted" />
-            <a href="vehicles.html"><i class="fas fa-car"></i>Vehicles</a>
+            <a href="vehicles.html" class="active"
+              ><i class="fas fa-car"></i>Vehicles</a
+            >
             <a href="drivers.html"><i class="fas fa-users"></i>Drivers</a>
-            <a href="transporter-info.html" class="active"
+            <a href="transporter-info.html"
               ><i class="fas fa-info-circle"></i>Info</a
             >
             <a href="documents.html"><i class="fas fa-file"></i>Documents</a>
           </ul>
         </aside>
         <div class="dashboard-main-content container-padding">
-          <form onsubmit="return false;">
-            <div class="form-section">
-              <div class="section-title">
-                <h3 class="title">Basic Information</h3>
-                <p class="description">
-                  The Information will be shown publicly. So, be careful what
-                  information you provide
-                </p>
-              </div>
-              <div class="section-forms">
+          <h2 class="fs-650 text-heading">
+            <i class="fas fa-plus-circle" aria-hidden="true"></i> Add New
+            Vehicle
+          </h2>
+          <hr />
+          <form onsubmit="return false">
+            <div class="even-columns">
+              <div>
                 <div class="form-control">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" class="form-input" />
+                  <label for="model">Model</label>
+                  <input type="text" id="model" class="form-input" />
                 </div>
                 <div class="form-control">
-                  <label for="email">Company Email</label>
-                  <input type="email" id="email" class="form-input" />
+                  <label for="plate-number">Plate Number</label>
+                  <input type="text" id="plate-number" class="form-input" />
                 </div>
                 <div class="form-control">
-                  <label for="phone-number">Phone Number</label>
-                  <input type="tel" id="phone-number" class="form-input" />
-                </div>
-                <div class="form-control">
-                  <label for="contact-person">Contact Person</label>
-                  <input type="text" id="contact-person" class="form-input" />
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="form-section">
-              <div class="section-title">
-                <h3 class="title">License Information</h3>
-                <p class="description">
-                  The Information will be shown publicly. So, be careful what
-                  information you provide
-                </p>
-              </div>
-              <div class="section-forms">
-                <div class="form-control">
-                  <label for="level-id">Level ID</label>
-                  <select id="level-id" class="form-select">
-                    <option value="">Level - 1</option>
-                    <option value="">Level - 2</option>
-                    <option value="">Level - 3</option>
-                    <option value="">Level - 4</option>
-                    <option value="">Level - 5</option>
+                  <label for="truck-type">Truck Type</label>
+                  <select id="truck-type" class="form-select">
+                    <option value="">Semi trailer truck</option>
+                    <option value="">Low bed</option>
+                    <option value="">High bed</option>
+                    <option value="">Sino truck</option>
                   </select>
                 </div>
                 <div class="form-control">
-                  <label for="tin">TIN</label>
-                  <input type="text" id="tin" class="form-input" />
+                  <label for="chassis-number">Chassis Number</label>
+                  <input type="text" id="chassis-number" class="form-input" />
                 </div>
+
                 <div class="form-control">
-                  <label for="cargo-insurance-amount"
-                    >Cargo Insurance Amount</label
-                  >
+                  <label for="motor-number">Motor Number</label>
+                  <input type="text" id="motor-number" class="form-input" />
+                </div>
+              </div>
+
+              <div>
+                <div class="form-control">
+                  <label for="manufactured-date">Manufactured Date</label>
                   <input
-                    type="text"
-                    id="cargo-insurance-amount"
+                    type="date"
+                    id="manufactured-date"
                     class="form-input"
                   />
                 </div>
                 <div class="form-control">
-                  <label for="comprehensive-insurance"
-                    >Comprehensive Insurance</label
-                  >
-                  <input
-                    type="text"
-                    id="comprehensive-insurance"
-                    class="form-input"
-                  />
+                  <label for="motor-capacity">Motor Capacity</label>
+                  <input type="number" id="motor-capacity" class="form-input" />
+                </div>
+                <div class="form-control">
+                  <label for="load-capacity">Load Capacity</label>
+                  <input type="number" id="load-capacity" class="form-input" />
+                </div>
+                <div class="form-control">
+                  <label for="accel-number">Accel Number</label>
+                  <input type="number" id="accel-number" class="form-input" />
                 </div>
               </div>
             </div>
+
             <div class="flex justify-end">
-              <!-- <button type="reset" class="button link outlined">Reset</button> -->
+              <a href="vehicles.html" class="button link">Cancel</a>
               <button type="submit" class="button accent">Submit</button>
             </div>
           </form>
