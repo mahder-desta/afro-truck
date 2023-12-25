@@ -190,13 +190,7 @@
                 </div>
                 <div class="shipment-timeline" id="pickup-forms">
                   <div class="shipment-node pickup-form">
-                    <button
-                      type="button"
-                      class="remove-pickup"
-                      id="remove-pickups"
-                    >
-                      <i class="fas fa-times"></i>
-                    </button>
+                    <button class="remove-pickup" id="remove-pickups">x</button>
                     <div class="node-content">
                       <div class="node-header open">
                         <h3 class="title">
@@ -325,7 +319,7 @@
                       class="remove-dropoff"
                       id="remove-dropoffs"
                     >
-                      <i class="fas fa-times"></i>
+                      x
                     </button>
                     <div class="node-content">
                       <div class="node-header open">
@@ -566,12 +560,14 @@
       }
 
       const firstPickupForm = document.querySelector(".pickup-form");
-      const pickupForms = document.querySelector("#pickup-forms");
+      const pickupForms = document.getElementById("pickup-forms");
 
       pickupForms.addEventListener("click", function (e) {
-        if (pickupForms.length == 1) return;
-        if (e.target.matches(".remove-pickup")) {
-          pickupForms.removeChild(e.target.parentNode);
+        if (e.target.classList.contains("remove-pickup")) {
+          var parentDiv = e.target.parentNode;
+
+          parentDiv.remove();
+          // pickupForms.removeChild(e.target.parentNode);
         }
       });
 
@@ -585,6 +581,8 @@
         const clonedHeader = clonedForm.querySelector(".node-header");
         // const removeBtn = clonedForm.querySelector(".remove-pickup");
         // removeBtn.addEventListener(("click", () => {}));
+        clonedHeader.classList.add("open");
+
         clonedHeader.addEventListener("click", function () {
           this.classList.toggle("open");
         });
@@ -597,9 +595,10 @@
       const dropoffForms = document.querySelector("#dropoff-forms");
 
       dropoffForms.addEventListener("click", function (e) {
-        if (dropoffForms.length == 1) return;
-        if (e.target.matches(".remove-dropoff")) {
-          dropoffForms.removeChild(e.target.parentNode);
+        if (e.target.classList.contains("remove-dropoff")) {
+          var parentDiv = e.target.parentNode;
+
+          parentDiv.remove();
         }
       });
 
@@ -611,6 +610,7 @@
       const addNewDropoffForm = () => {
         const clonedForm = firstDropoffForm.cloneNode(true);
         const clonedHeader = clonedForm.querySelector(".node-header");
+        clonedHeader.classList.add("open");
         clonedHeader.addEventListener("click", function () {
           this.classList.toggle("open");
         });

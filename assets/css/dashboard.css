@@ -496,7 +496,6 @@ tbody td {
   background-color: var(--clr-accent-100);
 }
 
-
 /* New Styles */
 
 .shipment-timeline {
@@ -514,7 +513,6 @@ tbody td {
   margin-left: -6px;
 
   border-left: 6px solid transparent;
-
 }
 
 .shipment-node .node-marker {
@@ -527,11 +525,9 @@ tbody td {
   border-radius: 50%;
   padding: 8px;
   box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1);
-
 }
 
 .shipment-node .node-marker .marker-circle {
-  
   height: 8px;
   width: 8px;
   background-color: var(--clr-accent-400);
@@ -545,8 +541,6 @@ tbody td {
   padding: 12px 16px;
   margin-left: -8px;
   border-radius: 8px;
-  
-
 }
 
 .shipment-node .node-detail {
@@ -558,14 +552,13 @@ tbody td {
   transition: display 0.2s ease-out;
 }
 
-.node-header.open~.node-detail {
+.node-header.open ~ .node-detail {
   display: block;
   max-height: auto;
 }
 
 .shipment-node.completed {
-  border-left-color:  var(--clr-accent-400);
-
+  border-left-color: var(--clr-accent-400);
 }
 
 .shipment-node .node-header {
@@ -574,13 +567,11 @@ tbody td {
   justify-content: space-between;
   /* padding: 6px 8px; */
   cursor: pointer;
-
 }
 
 .node-header .title {
   color: #636363;
   font-size: 17px;
-
 }
 
 .node-header .expand-node {
@@ -590,7 +581,8 @@ tbody td {
   color: #a0a0a0;
 }
 
-.shipment-node .remove-pickup, .shipment-node .remove-dropoff  {
+.shipment-node .remove-pickup,
+.shipment-node .remove-dropoff {
   position: absolute;
   right: 24px;
   top: 20px;
@@ -616,7 +608,6 @@ tbody td {
   min-height: 350px;
 }
 
-
 .radio-buttons {
   display: flex;
   flex-direction: column;
@@ -628,30 +619,28 @@ tbody td {
   display: flex;
   position: relative;
   align-items: center;
- 
-  
 }
 
 .radio-input-div label:hover {
   cursor: pointer;
 }
-.radio-input-div input{
+.radio-input-div input {
   margin-left: 1rem;
- }
+}
 
-.radio-input-div label{
+.radio-input-div label {
   /* box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.1); */
   position: absolute;
   border: 2px solid rgba(0, 0, 0, 0.1);
-  display: block;
-  padding: 1rem 2.5rem;
+  display: flex;
+  padding: 1rem 1rem;
+  padding-left: 2rem;
   border-radius: 8px;
   width: 100% !important;
   font-weight: bold;
   font-size: 17px;
 }
 
-
-.radio-input-div input[type="radio"]:checked+label {
+.radio-input-div input[type="radio"]:checked + label {
   border-color: var(--clr-accent-400);
 }

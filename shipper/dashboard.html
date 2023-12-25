@@ -95,7 +95,7 @@
               />
               <button
                 aria-label="submit search "
-                class="button accent roundeds"
+                class="button accent roundeds open-track-modal"
               >
                 <i class="fas fa-route"></i> Track
               </button>
@@ -418,7 +418,19 @@
                       name="select-offer"
                       value="5500"
                     />
-                    <label for="5500">5500 Birr</label>
+                    <label for="5500" class="flex justify-between">
+                      <span> 5500 Birr </span>
+                      <div class="flex">
+                        <div class="text-accent-400">
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="far fa-star fs-300"></i>
+                          <i class="far fa-star fs-300"></i>
+                          <!-- <i class="fas fa-star-half-alt"></i> -->
+                        </div>
+                      </div>
+                    </label>
                   </div>
 
                   <div class="radio-input-div">
@@ -428,7 +440,19 @@
                       name="select-offer"
                       value="4500"
                     />
-                    <label for="4500">4500 Birr</label>
+                    <label for="4500" class="flex justify-between">
+                      <span> 4500 Birr </span>
+                      <div class="flex">
+                        <div class="text-accent-400">
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <!-- <i class="fas fa-star-half-alt"></i> -->
+                        </div>
+                      </div>
+                    </label>
                   </div>
 
                   <div class="radio-input-div">
@@ -438,7 +462,19 @@
                       name="select-offer"
                       value="4000"
                     />
-                    <label for="4000">4000 Birr</label>
+                    <label for="4000" class="flex justify-between">
+                      <span> 4000 Birr </span>
+                      <div class="flex">
+                        <div class="text-accent-400">
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="far fa-star fs-300"></i>
+                          <!-- <i class="fas fa-star-half-alt"></i> -->
+                        </div>
+                      </div>
+                    </label>
                   </div>
 
                   <div class="radio-input-div">
@@ -448,7 +484,19 @@
                       name="select-offer"
                       value="3500"
                     />
-                    <label for="3500">3500 Birr</label>
+                    <label for="3500" class="flex justify-between">
+                      <span> 3500 Birr </span>
+                      <div class="flex">
+                        <div class="text-accent-400">
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="far fa-star fs-300"></i>
+                          <i class="far fa-star fs-300"></i>
+                          <!-- <i class="fas fa-star-half-alt"></i> -->
+                        </div>
+                      </div>
+                    </label>
                   </div>
 
                   <div class="radio-input-div">
@@ -458,10 +506,22 @@
                       name="select-offer"
                       value="3000"
                     />
-                    <label for="3000">3000 Birr</label>
+                    <label for="3000" class="flex justify-between">
+                      <span> 3000 Birr </span>
+                      <div class="flex">
+                        <div class="text-accent-400">
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <i class="fas fa-star fs-300"></i>
+                          <!-- <i class="fas fa-star-half-alt"></i> -->
+                        </div>
+                      </div>
+                    </label>
                   </div>
                 </div>
-                <button type="button" class="button accent my-4">Submit</button>
+                <button type="button" class="button accent my-4">Award</button>
               </div>
             </div>
           </div>
@@ -929,6 +989,436 @@
         </form>
       </dialog>
 
+      <!-- track modal -->
+      <dialog class="modal modal-lg" id="track-modal">
+        <form method="dialog">
+          <div class="flex">
+            <span class="header">Shipment status</span>
+            <span class="badge primary">Confirmed</span>
+          </div>
+
+          <hr />
+
+          <div class="form-section">
+            <div class="section-title">
+              <h3 class="title">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                Pickup Details
+              </h3>
+              <p class="description">
+                The Information will be shown publicly. So, be careful what
+                information you provide
+              </p>
+            </div>
+            <div class="section-forms">
+              <div class="shipment-timeline">
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Djibouti Terminal 1</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Dire Dawa Station</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Woldiya Store</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Alamata Checkpoint</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Mekelle Warehouse</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="form-section">
+            <div class="section-title">
+              <h3 class="title">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                Drop-off Details
+              </h3>
+              <p class="description">
+                The Information will be shown publicly. So, be careful what
+                information you provide
+              </p>
+            </div>
+            <div class="section-forms">
+              <div class="shipment-timeline">
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Djibouti Terminal 1</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node completed">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Dire Dawa Station</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Woldiya Store</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Alamata Checkpoint</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Consignee:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="shipment-node">
+                  <div class="node-marker">
+                    <div class="marker-circle"></div>
+                  </div>
+                  <div class="node-content">
+                    <div class="node-header">
+                      <h3 class="title">Mekelle Warehouse</h3>
+                      <button type="button" class="expand-node">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <div class="node-detail">
+                      <div class="flex">
+                        <div class="item-key">Recipient:</div>
+                        <div class="item-value">Mahder Desta Bayru</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Company:</div>
+                        <div class="item-value">Abc Trading</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Phone:</div>
+                        <div class="item-value">+2519897686</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Email:</div>
+                        <div class="item-value">AbcTrading@gmail.com</div>
+                      </div>
+                      <div class="flex">
+                        <div class="item-key">Location:</div>
+                        <div class="item-value">
+                          Piasa - Addis Ababa, Ethiopia
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="actions">
+            <button class="button link" id="close-track-modal">Close</button>
+          </div>
+        </form>
+      </dialog>
+
       <!-- Delete Modal -->
       <dialog class="modal" id="delete-modal">
         <form method="dialog">
@@ -975,6 +1465,21 @@
 
       closeDetailModal.addEventListener("click", () => {
         detailModal.close();
+      });
+
+      //Truck Modal
+      const trackModal = document.querySelector("#track-modal");
+      openTruckModal = document.querySelectorAll(".open-track-modal");
+      closeTruckModal = document.querySelector("#close-track-modal");
+
+      openTruckModal.forEach((element) => {
+        element.addEventListener("click", () => {
+          trackModal.showModal();
+        });
+      });
+
+      closeTruckModal.addEventListener("click", () => {
+        trackModal.close();
       });
 
       //Delete Modal
